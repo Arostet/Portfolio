@@ -1,1 +1,85 @@
+.card-hover:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* shadow effect */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition  hover effect */
+}
+.list-group-item .text-content {
+  display: block; /* Ensure the text is always visible initially */
+}
+
+.list-group-item .icon-content {
+  display: none; /* Hide the icon initially */
+}
+
+.list-group-item:hover .text-content {
+  display: none; /* Hide text on hover */
+}
+
+.list-group-item:hover .icon-content {
+  display: inline-block; /* Show icon on hover */
+  margin: 3vh;
+}
+
+.iconClass {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.iconClass::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  visibility: hidden;
+  transition: all 0.7s ease;
+}
+
+.iconClass.sheen::after {
+  visibility: visible;
+  top: 100%;
+}
+
+.linkedini {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  #profilePicture {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bi {
+    display: none;
+  }
+}
 /* https://www.adhamdannaway.com/about this is my style reference */
+
+.whatsapp-button,
+.email-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  background-color: #25d366; /* WhatsApp Green */
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.email-button {
+  background-color: #c71610;
+}
